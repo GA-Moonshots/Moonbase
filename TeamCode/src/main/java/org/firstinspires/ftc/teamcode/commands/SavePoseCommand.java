@@ -3,16 +3,16 @@ package org.firstinspires.ftc.teamcode.commands;
 import com.pedropathing.geometry.Pose;
 import com.seattlesolvers.solverslib.command.CommandBase;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.subsystems.PedroDrive;
 import org.firstinspires.ftc.teamcode.utils.TeleOpMain;
 import org.firstinspires.ftc.teamcode.utils.PersistentPoseManager;
 
 public class SavePoseCommand extends CommandBase {
     private final PedroDrive driveSubsystem;
-    private Ganymede robot;
+    private Moonbase robot;
 
-    public SavePoseCommand(Ganymede robot) {
+    public SavePoseCommand(Moonbase robot) {
         this.driveSubsystem = robot.drive;
         this.robot = robot;
     }

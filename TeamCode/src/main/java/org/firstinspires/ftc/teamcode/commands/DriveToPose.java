@@ -7,7 +7,7 @@ import com.pedropathing.paths.PathBuilder;
 import com.seattlesolvers.solverslib.command.CommandBase;
 import com.seattlesolvers.solverslib.geometry.Pose2d;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.utils.Constants;
 
 public class DriveToPose extends DriveAbstract {
@@ -27,7 +27,7 @@ public class DriveToPose extends DriveAbstract {
      * @param robot Main robot object containing all subsystems
      * @param timeoutSeconds Safety timeout in seconds
      */
-    public DriveToPose(Ganymede robot, Pose target, double timeoutSeconds) {
+    public DriveToPose(Moonbase robot, Pose target, double timeoutSeconds) {
         super(robot, timeoutSeconds);
         this.targetPose = target;
     }

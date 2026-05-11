@@ -12,7 +12,7 @@ import com.seattlesolvers.solverslib.command.SubsystemBase;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.IMU;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.utils.Constants;
 
 /**
@@ -37,7 +37,7 @@ public class PedroDrive extends SubsystemBase {
     // ============================================================
 
     /** Reference to main robot object for hardware access */
-    private final Ganymede robot;
+    private final Moonbase robot;
     /** Pedro Pathing Follower - handles all path following and localization */
     public final Follower follower;
     /** Individual motor controllers for mecanum drive */
@@ -87,7 +87,7 @@ public class PedroDrive extends SubsystemBase {
      * @param robot Reference to the main robot object
      * @param startPose Initial pose for localization (x, y in inches, heading in radians)
      */
-    public PedroDrive(Ganymede robot, Pose startPose) {
+    public PedroDrive(Moonbase robot, Pose startPose) {
         this.robot = robot;
 
         // ============ Motor Initialization ============
@@ -429,23 +429,10 @@ public class PedroDrive extends SubsystemBase {
                 currentPose.getX(), currentPose.getY());
         robot.sensors.addTelemetry("Heading", "%.1f°",
                 Math.toDegrees(currentPose.getHeading()));
-        robot.sensors.addTelemetry("Dist to Goal (in)", "%.1f", getDistanceToGoal());
     }
 
     // ============================================================
     //                    GETTERS AND SETTERS
-
-    /**
-     * Returns the straight-line distance (inches) from the robot's current pose
-     * to the alliance scoring goal. Uses robot.isRed to select the correct target.
-     * This is the single source of truth — telemetry and LauncherRPM both call this.
-     */
-    public double getDistanceToGoal() {
-        Pose current = getPose();
-        double targetX = robot.isRed ? Constants.RED_TARGET_X : Constants.BLUE_TARGET_X;
-        double targetY = robot.isRed ? Constants.RED_TARGET_Y : Constants.BLUE_TARGET_Y;
-        return Math.hypot(targetX - current.getX(), targetY - current.getY());
-    }
 
     /**
      * @return Current field-centric mode state

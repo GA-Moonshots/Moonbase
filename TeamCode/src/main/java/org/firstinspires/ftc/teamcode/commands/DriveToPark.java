@@ -4,7 +4,7 @@ import com.pedropathing.geometry.BezierLine;
 import com.pedropathing.geometry.Pose;
 import com.pedropathing.paths.Path;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.utils.Constants;
 
 /**
@@ -23,17 +23,7 @@ import org.firstinspires.ftc.teamcode.utils.Constants;
  */
 public class DriveToPark extends DriveAbstract {
 
-    // ============================================================
-    //                     PARKING COORDINATES
-    // ============================================================
-
-    /** Red alliance observation zone parking position */
-    private static final double RED_PARK_X = 40.0;
-    private static final double RED_PARK_Y = 32.0;
-
-    /** Blue alliance observation zone parking position */
-    private static final double BLUE_PARK_X = 105.0;
-    private static final double BLUE_PARK_Y = 32.0;
+    // Parking coordinates live in Constants.java — update them there each year.
 
     // ============================================================
     //                     COMMAND STATE
@@ -56,7 +46,7 @@ public class DriveToPark extends DriveAbstract {
      * @param robot Main robot object (contains alliance color)
      * @param timeoutSeconds Safety timeout in seconds (typically 5-10s)
      */
-    public DriveToPark(Ganymede robot, double timeoutSeconds) {
+    public DriveToPark(Moonbase robot, double timeoutSeconds) {
         super(robot, timeoutSeconds);
     }
 
@@ -70,9 +60,8 @@ public class DriveToPark extends DriveAbstract {
 
         Pose currentPose = follower.getPose();
 
-        // Select parking coordinates based on alliance color
-        double parkX = robot.isRed ? RED_PARK_X : BLUE_PARK_X;
-        double parkY = robot.isRed ? RED_PARK_Y : BLUE_PARK_Y;
+        double parkX = robot.isRed ? Constants.RED_PARK_X : Constants.BLUE_PARK_X;
+        double parkY = robot.isRed ? Constants.RED_PARK_Y : Constants.BLUE_PARK_Y;
 
         // Create target pose (maintain current heading to avoid unnecessary rotation)
         targetPose = new Pose(parkX, parkY, 0);

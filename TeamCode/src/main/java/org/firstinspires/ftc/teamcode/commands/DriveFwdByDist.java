@@ -4,7 +4,7 @@ import com.pedropathing.geometry.BezierLine;
 import com.pedropathing.geometry.Pose;
 import com.pedropathing.paths.PathBuilder;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.utils.Constants;
 
 /**
@@ -46,7 +46,7 @@ public class DriveFwdByDist extends DriveAbstract {
      * @param distance Distance to move (positive = forward, negative = backward) in inches
      * @param timeoutSeconds Safety timeout in seconds
      */
-    public DriveFwdByDist(Ganymede robot, double distance, double timeoutSeconds) {
+    public DriveFwdByDist(Moonbase robot, double distance, double timeoutSeconds) {
         super(robot, timeoutSeconds);
         this.distance = distance;
     }

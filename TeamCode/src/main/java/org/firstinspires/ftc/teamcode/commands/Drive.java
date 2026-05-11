@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.commands;
 import com.seattlesolvers.solverslib.command.CommandBase;
 import com.seattlesolvers.solverslib.gamepad.GamepadEx;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.subsystems.PedroDrive;
 import org.firstinspires.ftc.teamcode.utils.Constants;
 
@@ -24,14 +24,14 @@ public class Drive extends CommandBase {
     private final PedroDrive drive;
     /** Gamepad for driver controls */
     private final GamepadEx player1;
-    private final Ganymede robot;
+    private final Moonbase robot;
 
     /**
      * Constructor - Initializes the drive command with required subsystems
      *
      * @param robot Main robot object containing all subsystems
      */
-    public Drive(Ganymede robot) {
+    public Drive(Moonbase robot) {
         // Store references for easy access
         this.robot = robot;
         this.drive = robot.drive;
@@ -57,10 +57,6 @@ public class Drive extends CommandBase {
      */
     @Override
     public void execute() {
-
-
-
-
         // ============ SPEED MODIFIERS ============
         // Slow mode is activated when:
         // - Right bumper is held (for precise movements)
@@ -111,8 +107,7 @@ public class Drive extends CommandBase {
         // Stop the robot when command ends
         drive.stop();
 
-        // Log command termination
-        robot.telemetry.addData("Drive", interrupted ? "Interrupted" : "Ended");
+        robot.sensors.addTelemetry("Drive", interrupted ? "Interrupted" : "Ended");
     }
 
     /**

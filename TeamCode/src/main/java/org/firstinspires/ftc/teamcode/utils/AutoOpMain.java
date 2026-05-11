@@ -4,91 +4,61 @@ import com.pedropathing.geometry.Pose;
 import com.seattlesolvers.solverslib.command.CommandOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.commands.SavePoseCommand;
 
 /**
- * Main autonomous OpMode with alliance and position selection
+ * Autonomous OpMode entry point.
  *
- * During init:
- * - Press X for BLUE, B for RED
- * - Press A for NEAR GOAL, Y for FAR GOAL
- * - Current selection shown on telemetry
- * - Press START to begin
+ * During init, the driver selects alliance color (B = RED, X = BLUE).
+ * Add more selection options here if the game has multiple starting positions —
+ * see archive/season-2025-26/utils/AutoOpMain.java for a near/far example.
  *
- * MOTIF pattern will be automatically detected from obelisk during autonomous
+ * The selected configuration is passed to the Moonbase constructor, which
+ * sets the starting pose and schedules the autonomous sequence.
+ *
+ * SavePoseCommand runs at the end of auto and writes the final pose + alliance
+ * to a file so TeleOp can pick up from where auto left off.
  */
 @Autonomous(name = "Autonomous - Main", group = "Competition")
 public class AutoOpMain extends CommandOpMode {
 
-    private boolean isRed;
-    private boolean isNearGoal;
-    private Ganymede robot;
+    private boolean isRed = true;
+    private Moonbase robot;
 
-    /**
-     * Initialize and handle alliance/position selection
-     */
     @Override
     public void initialize() {
-        // Default starting configuration
-        isRed = true;
-        isNearGoal = true;
-
-        // Selection loop - runs until START is pressed
+        // Selection loop — runs until START is pressed
         while (opModeInInit()) {
-            // Alliance selection: X for blue, B for red
-            if (gamepad1.x || gamepad2.x) {
-                isRed = false;
-            } else if (gamepad1.b || gamepad2.b) {
-                isRed = true;
-            }
+            if      (gamepad1.x || gamepad2.x) isRed = false;
+            else if (gamepad1.b || gamepad2.b) isRed = true;
 
-            // Position selection: A for near goal, Y for far goal
-            if (gamepad1.a || gamepad2.a) {
-                isNearGoal = true;
-            } else if (gamepad1.y || gamepad2.y) {
-                isNearGoal = false;
-            }
-
-            // Display current selection
             telemetry.addLine("═══════════════════════════════");
             telemetry.addLine("   AUTONOMOUS CONFIGURATION");
             telemetry.addLine("═══════════════════════════════");
             telemetry.addLine();
-            telemetry.addData("Alliance", isRed ? "RED (B)" : "BLUE (X)");
-            telemetry.addData("Position", isNearGoal ? "Near Goal (A)" : "Far Goal (Y)");
+            telemetry.addData("Alliance", isRed ? "RED  (B)" : "BLUE (X)");
+            // TODO: Add position selection lines here if the game has multiple starting tiles.
             telemetry.addLine();
             telemetry.addLine("Press START when ready!");
             telemetry.update();
         }
 
-        // Build robot with selected configuration
-        // MOTIF will be detected automatically during autonomous
-        robot = new Ganymede(this, isRed, isNearGoal);
-
+        robot = new Moonbase(this, isRed);
         schedule(new SavePoseCommand(robot));
     }
 
-    /**
-     * Main autonomous execution loop
-     */
     @Override
     public void run() {
         super.run();
     }
 
-    /**
-     * Cleanup when OpMode stops
-     * SAVES BOTH POSE AND ALLIANCE COLOR for TeleOp
-     */
+    /** Saves the robot's final pose and alliance color so TeleOp can resume correctly. */
     @Override
     public void reset() {
         super.reset();
-
-        // Save final pose AND alliance color for TeleOp
         if (robot != null && robot.drive != null) {
-            Pose finalPose = robot.drive.getPose();
-            PersistentPoseManager.savePose(finalPose, isRed);
+            PersistentPoseManager.savePose(robot.drive.getPose(), isRed);
         }
     }
 }

@@ -4,7 +4,7 @@ import com.pedropathing.geometry.Pose;
 import com.seattlesolvers.solverslib.command.CommandOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 
 /**
  * Main TeleOp mode using CommandOpMode
@@ -19,12 +19,12 @@ import org.firstinspires.ftc.teamcode.Ganymede;
 @TeleOp(name = "TeleOp - Main", group = "Competition")
 public class TeleOpMain extends CommandOpMode {
 
-    private Ganymede robot;
+    private Moonbase robot;
 
     @Override
     public void initialize() {
         // Create the robot - this initializes all subsystems
-        robot = new Ganymede(this);
+        robot = new Moonbase(this);
 
         telemetry.addData("Status", "Ready to run!");
         telemetry.update();

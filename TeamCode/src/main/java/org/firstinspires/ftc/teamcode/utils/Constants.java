@@ -16,188 +16,125 @@ import com.pedropathing.control.FilteredPIDFCoefficients;
 import com.pedropathing.control.PIDFCoefficients;
 
 import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
-import org.firstinspires.ftc.robotcore.external.navigation.Pose2D;
 
 public class Constants {
 
-    /** Drive motor names - must match hardware map exactly */
-    public static final String LEFT_FRONT_NAME = "leftFront";
+    // ============================================================
+    //                    DRIVE MOTOR NAMES
+    //   Must match the hardware map in the Robot Controller app.
+    // ============================================================
+
+    public static final String LEFT_FRONT_NAME  = "leftFront";
     public static final String RIGHT_FRONT_NAME = "rightFront";
-    public static final String LEFT_BACK_NAME = "leftBack";
-    public static final String RIGHT_BACK_NAME = "rightBack";
+    public static final String LEFT_BACK_NAME   = "leftBack";
+    public static final String RIGHT_BACK_NAME  = "rightBack";
 
-    public static final String LAUNCHER_NAME = "launcher";
-    public static final String INTAKE_NAME = "intake";
+    // ============================================================
+    //                    MECHANISM HARDWARE NAMES
+    //   Add motor/servo names here for each mechanism on this
+    //   year's robot. See archive/season-2025-26/ for examples.
+    //
+    //   Pattern:
+    //     public static final String LIFT_NAME = "lift";
+    //     public static final String CLAW_SERVO_NAME = "claw";
+    // ============================================================
 
-    /* Servo */
-    public static final String COLOR_GATE_NAME = "colorGate";
-    public static final String TURRET_SERVO_NAME = "turretServo";
-    public static final String LAUNCHER_SERVO_NAME = "launcherServo";
-    public static final String GREEN_FEEDER_SERVO_NAME = "greenServo";
-    public static final String PURPLE_FEEDER_SERVO_NAME = "purpleServo";
-    public static final String GREEN_SORTER_NAME = "stopperG";
-    public static final String PURPLE_SORTER_NAME = "stopperP";
-    public static final String LINEAR_SERVO = "linearServo";
+    // ============================================================
+    //                    SENSOR NAMES
+    // ============================================================
 
+    public static final String IMU_NAME      = "imu";
+    public static final String COLOR_SENSOR  = "colorSensor";
+    public static final String LIMELIGHT_NAME = "limelight";
 
+    // ============================================================
+    //                    MOTOR DIRECTIONS
+    //   Verify with TeleOp while robot is propped up on a block.
+    //   If a wheel spins backward, flip its direction here.
+    // ============================================================
 
-    /* Sensors */
-    public static final String LEFT_BUTTON_NAME = "leftButton";
-    public static final String FRONT_BUTTON_NAME = "frontButton";
-
-    /** Motor directions - verify this first with teleOp driving while propped up on a foam block */
-    public static final DcMotorSimple.Direction LEFT_FRONT_DIRECTION = DcMotorSimple.Direction.REVERSE;
-    public static final DcMotorSimple.Direction LEFT_BACK_DIRECTION = DcMotorSimple.Direction.FORWARD;
+    public static final DcMotorSimple.Direction LEFT_FRONT_DIRECTION  = DcMotorSimple.Direction.REVERSE;
+    public static final DcMotorSimple.Direction LEFT_BACK_DIRECTION   = DcMotorSimple.Direction.FORWARD;
     public static final DcMotorSimple.Direction RIGHT_FRONT_DIRECTION = DcMotorSimple.Direction.REVERSE;
-    public static final DcMotorSimple.Direction RIGHT_BACK_DIRECTION = DcMotorSimple.Direction.FORWARD;
+    public static final DcMotorSimple.Direction RIGHT_BACK_DIRECTION  = DcMotorSimple.Direction.FORWARD;
 
-    /** Zero power behavior: BRAKE = resist, FLOAT = free spin */
+    /** BRAKE = resist movement at zero power. FLOAT = free spin. */
     public static final DcMotor.ZeroPowerBehavior DRIVE_ZERO_POWER_BEHAVIOR =
             DcMotor.ZeroPowerBehavior.BRAKE;
 
     // ============================================================
-    //             MOTOR POWER LIMITS, TOLERANCES, & SETTINGS
+    //                    DRIVE SPEED & TOLERANCES
+    // ============================================================
 
-    /** Maximum drive power (0.0 to 1.0) */
-    public static final double MAX_DRIVE_POWER = 1.0;
+    public static final double MAX_DRIVE_POWER       = 1.0;
+    public static final double MIN_DRIVE_SPEED       = 0.2;
+    public static final double MAX_DRIVE_SPEED       = 1.0;
+    public static final double DEFAULT_DRIVE_SPEED   = 1.0;
+    /** Multiplier applied when slow-mode button is held (right bumper). */
+    public static final double SLOW_MODE_MULTIPLIER  = 0.3;
 
-    /** Drive speed multipliers for teleop */
-    public static final double MIN_DRIVE_SPEED = 0.2;
-    public static final double MAX_DRIVE_SPEED = 1.0;
-    public static final double DEFAULT_DRIVE_SPEED = 1;
-    public static final double SLOW_MODE_MULTIPLIER = 0.3;
-
-    /** Input threshold and tolerances */
-    public static final double INPUT_THRESHOLD = 0.1;
-    public static final double POSE_TOLERANCE = 0.5;
+    /** Gamepad stick inputs below this threshold are ignored (prevents drift). */
+    public static final double INPUT_THRESHOLD        = 0.1;
+    /** How close (inches) the robot must be to a target pose to consider it reached. */
+    public static final double POSE_TOLERANCE         = 0.5;
+    /** How close (degrees) the heading must be to consider a turn complete. */
     public static final double HEADING_TOLERANCE_DEGREES = 10.0;
 
-    /** Default field-centric mode on startup */
+    /** Start in field-centric mode by default. */
     public static final boolean DEFAULT_FIELD_CENTRIC = true;
 
-    /** Servo power for rotation - adjust as needed for your mechanism */
-    public static final double TURRET_ROTATION_POWER = 1;
-
     // ============================================================
-    //                    FIELD GEOMETRY & SCORING
+    //                    FIELD GEOMETRY
+    //   Update these bounds for the new game's field dimensions.
+    //   Used by Panels for field visualization.
+    // ============================================================
 
-    /** Field corner coordinates */
     public static final double FIELD_BOTTOM_LEFT_X = 0;
     public static final double FIELD_BOTTOM_LEFT_Y = -86;
-    public static final double FIELD_TOP_RIGHT_X = 230;
-    public static final double FIELD_TOP_RIGHT_Y = 144;
-
-    /** Blue alliance scoring target  */
-    public static final double BLUE_TARGET_X = 12;
-    public static final double BLUE_TARGET_Y = 124;
-
-    /** Red alliance scoring target  */
-    public static final double RED_TARGET_X = 118.4;
-    public static final double RED_TARGET_Y = 125;
-
-    public static final Pose FIRST_RED_BALL_SET = new Pose(41.8, 84.4, Math.toRadians(-178.1));
-    public static final Pose SECOND_RED_BALL_SET = new Pose(41.8, 60.2, Math.toRadians(-178.1));
-    public static final Pose THIRD_RED_BALL_SET = new Pose(41.8, 34.5, Math.toRadians(-178.1));
-
-    public static final Pose FIRST_BLUE_BALL_SET = new Pose(103.9, 84.5, Math.toRadians(-0.9));
-    public static final Pose SECOND_BLUE_BALL_SET = new Pose(103.9, 59.5, Math.toRadians(-0.9));
-    public static final Pose THIRD_BLUE_BALL_SET = new Pose(103.9, 36.3, Math.toRadians(-0.9));
-
-    /**
-     * Launcher heading offset in degrees
-     *
-     * When the turret is in LEFT position, the launcher is rotated
-     * 90 degrees from the robot's heading. To aim at the goal, we
-     * need to offset the robot's heading by this amount.
-     */
-    public static final double LAUNCHER_LEFT_HEADING_OFFSET_DEGREES = 90.0;
+    public static final double FIELD_TOP_RIGHT_X   = 230;
+    public static final double FIELD_TOP_RIGHT_Y   = 144;
 
     // ============================================================
-    //                    LAUNCHER CONSTANTS
+    //                    PARKING COORDINATES
+    //   Update these for the new game's observation/parking zone.
+    //   Used by DriveToPark — one set per alliance.
+    // ============================================================
 
-    /** Idle flywheel power - keeps motor warm for faster spin-up */
-    public static final double LAUNCHER_IDLE_POWER = 0.3;
-
-    /** Default launch power when no specific power is provided */
-    public static final double LAUNCHER_DEFAULT_POWER = 0.7;
-
-    /** RPM at which the flywheel is fast enough to start feeding */
-    public static final double LAUNCHER_FEED_RPM = 150.0;
-
-    /** Safety timeout for RPM-based launch (seconds) */
-    public static final double LAUNCHER_RPM_TIMEOUT_SECONDS = 9.0;
-
-    /** Duration each feeder pulse runs (ms) — short enough to push one ball */
-    public static final long LAUNCHER_PULSE_ON_MS = 150;
-
-    /** Observation gap after each pulse — flywheel tells us if a ball went through */
-    public static final long LAUNCHER_PULSE_OFF_MS = 200;
-
-    /** Max feed attempts before giving up (safety fallback, not the primary stop) */
-    public static final int LAUNCHER_MAX_PULSES = 6;
-
-    /**
-     * Distance-to-RPM calibration table.
-     *
-     * Each row is { distanceInches, targetRPM }.
-     * The table must be sorted by distance (ascending).
-     *
-     * HOW TO FILL THIS IN:
-     *   1. Run TeleOp — telemetry shows "Dist to Goal (in)" live.
-     *   2. Position the robot at each distance.
-     *   3. Fire shots at various RPMs and observe which ones land.
-     *   4. Update the RPM values below with what actually worked.
-     *
-     * WHY RPM AND NOT POWER?
-     *   Motor power varies with battery voltage — RPM control uses the
-     *   motor's built-in velocity PID to hit the same speed every time.
-     */
-    // Motor max is ~200 RPM — all target values must stay at or below this.
-    // LAUNCHER_FEED_RPM (150) is the floor; useful calibration range is ~150–200.
-    public static final double[][] LAUNCHER_RPM_TABLE = {
-        { 25,  140.0 },
-        { 42,  135.0 },
-        { 55,  135.0 },
-        { 66,  145 },
-        { 113,  170.0 }
-    };
-
-    /**
-     * Given a distance (inches), returns the target flywheel RPM by linearly
-     * interpolating between the two nearest entries in LAUNCHER_RPM_TABLE.
-     *
-     * Linear interpolation: if dist is halfway between two table entries,
-     * the returned RPM is halfway between their RPM values.
-     */
-    public static double distanceToRPM(double distanceInches) {
-        double[][] t = LAUNCHER_RPM_TABLE;
-
-        // Clamp to table bounds — don't extrapolate beyond tested range
-        if (distanceInches <= t[0][0])          return t[0][1];
-        if (distanceInches >= t[t.length-1][0]) return t[t.length-1][1];
-
-        // Find the two surrounding entries and interpolate between them
-        for (int i = 0; i < t.length - 1; i++) {
-            if (distanceInches <= t[i+1][0]) {
-                // frac = how far between entry i and entry i+1 we are (0.0 to 1.0)
-                double frac = (distanceInches - t[i][0]) / (t[i+1][0] - t[i][0]);
-                return t[i][1] + frac * (t[i+1][1] - t[i][1]);
-            }
-        }
-
-        return LAUNCHER_FEED_RPM; // fallback — should never reach here
-    }
+    public static final double RED_PARK_X  = 40.0;
+    public static final double RED_PARK_Y  = 32.0;
+    public static final double BLUE_PARK_X = 105.0;
+    public static final double BLUE_PARK_Y = 32.0;
 
     // ============================================================
-    //                    SENSOR MAPPINGS
+    //                    GAME-SPECIFIC CONSTANTS
+    //   This is where scoring targets, game piece positions, and
+    //   mechanism tuning values live. They change every season.
+    //   See archive/season-2025-26/utils/ for a complete example.
+    //
+    //   Common patterns to add back each year:
+    //
+    //   // Scoring target for each alliance:
+    //   public static final double RED_TARGET_X  = ...;
+    //   public static final double RED_TARGET_Y  = ...;
+    //   public static final double BLUE_TARGET_X = ...;
+    //   public static final double BLUE_TARGET_Y = ...;
+    //
+    //   // Game piece field positions:
+    //   public static final Pose FIRST_RED_PIECE  = new Pose(...);
+    //   public static final Pose SECOND_RED_PIECE = new Pose(...);
+    //
+    //   // Mechanism power/RPM tuning:
+    //   public static final double LAUNCHER_IDLE_POWER  = 0.3;
+    //   public static final double LAUNCHER_FEED_RPM    = 150.0;
+    //   public static final double[][] RPM_TABLE = { {dist, rpm}, ... };
+    //   public static double lookupRPM(double dist) { ... }
+    // ============================================================
 
-    /** IMU hardware map name */
-    public static final String IMU_NAME = "imu";
+    // ============================================================
+    //                    IMU ORIENTATION
+    //   Change these if the REV Hub is remounted in a new position.
+    // ============================================================
 
-    public static final String COLOR_SENSOR = "colorSensor";
-
-    public static final String LIMELIGHT_NAME = "limelight";
-    /** IMU mounting orientation - update based on REV Hub position */
     public static final RevHubOrientationOnRobot.LogoFacingDirection IMU_LOGO_DIRECTION =
             RevHubOrientationOnRobot.LogoFacingDirection.DOWN;
     public static final RevHubOrientationOnRobot.UsbFacingDirection IMU_USB_DIRECTION =
@@ -205,49 +142,47 @@ public class Constants {
 
     // ============================================================
     //                    PEDRO FOLLOWER CONSTANTS
+    //
+    //   NOTE: If upgrading to Pedro Pathing v2.1+, the PIDF
+    //   coefficients below are replaced by predictive braking.
+    //   See: pedropathing.com/docs/pathing/tuning/drive-algorithm/predictive
+    //
+    //   Tuning order (do once at the start of each season after re-mounting odometry):
+    //     1. Forward Zero Power Acceleration (automatic tuner)
+    //     2. Lateral Zero Power Acceleration (automatic tuner)
+    //     3. Forward Velocity / Lateral Velocity (automatic tuner)
+    //     4. Translational PIDF (manual — push sideways, adjust until smooth)
+    //     5. Heading PIDF (manual — rotate robot, adjust until smooth)
+    //     6. Drive PIDF (optional fine-tuning)
+    //     7. Centripetal scaling (run circles, typical 0.001–0.01)
+    // ============================================================
 
     public static FollowerConstants followerConstants = new FollowerConstants()
-            /** Robot mass in kg - weigh robot BEFORE tuning */
             .mass(13.607)
-
-            /** Dual PID flags - start false, enable for boss-level fine tuning (we think) */
             .useSecondaryTranslationalPIDF(false)
             .useSecondaryHeadingPIDF(false)
             .useSecondaryDrivePIDF(false)
-
-            /** Tune with: Automatic → Forward Zero Power Acceleration */
             // https://pedropathing.com/docs/pathing/tuning/automatic#forward-zero-power-acceleration
             .forwardZeroPowerAcceleration(-49.49417)
-            /** Tune with: Automatic → Lateral Zero Power Acceleration */
             // https://pedropathing.com/docs/pathing/tuning/automatic#lateral-zero-power-acceleration
             .lateralZeroPowerAcceleration(-96.90029)
-
-            /** Tune with: Manual → Translational - push sideways, adjust until smooth return */
             // https://pedropathing.com/docs/pathing/tuning/pids/translational
             .translationalPIDFCoefficients(new PIDFCoefficients(0.08, 0, 0.005, 0.035))
-            //.secondaryTranslationalPIDFCoefficients(new PIDFCoefficients(0.095, 0, 0.01, 0.03))
-
-            /** Tune with: Manual → Heading - rotate robot, adjust until smooth return */
             // https://pedropathing.com/docs/pathing/tuning/pids/heading
             .headingPIDFCoefficients(new PIDFCoefficients(0.9, 0, 0.02, 0.03))
-
-            /** Tune with: Manual → Drive (optional) - only after other PIDs work */
             // https://pedropathing.com/docs/pathing/tuning/pids/drive
             .drivePIDFCoefficients(new FilteredPIDFCoefficients(0.003, 0, 0.0001, 0, 0.3))
-
-            /** Tune with: Manual → Centripetal - run circles, typical: 0.001-0.01 */
             // https://pedropathing.com/docs/pathing/tuning/pids/centripetal
-            .centripetalScaling(0.0005
-            );
+            .centripetalScaling(0.0005);
 
     // ============================================================
-    //               MECANUM DRIVETRAIN CONSTANTS
+    //                    MECANUM DRIVETRAIN CONSTANTS
+    //   Re-tune xVelocity and yVelocity if the drivetrain changes.
+    //   https://pedropathing.com/docs/pathing/tuning/automatic#forward-velocity-tuner
+    // ============================================================
 
     public static MecanumConstants mecanumConstants = new MecanumConstants()
-            /** Tune with: Automatic → Forward Velocity  */
-            // https://pedropathing.com/docs/pathing/tuning/automatic#forward-velocity-tuner
             .xVelocity(62.72988)
-            /** Tune with: Automatic → Lateral Velocity */
             .yVelocity(49.42162)
             .maxPower(MAX_DRIVE_POWER)
             .rightRearMotorName(RIGHT_BACK_NAME)
@@ -260,32 +195,36 @@ public class Constants {
             .rightRearMotorDirection(RIGHT_BACK_DIRECTION);
 
     /**
-     * Path completion criteria
-     * Adjust after basic tuning complete
+     * Path completion criteria — tighten tolerances after basic tuning is done.
+     *   End T-value: increase if path stops before the endpoint
+     *   Timeout ms:  increase if path cuts corners at full speed
      */
     public static PathConstraints pathConstraints = new PathConstraints(
-            0.99,   // End T-value (increase if stopping early)
-            100,    // Timeout ms (increase if cutting corners)
-            1,      // Position tolerance inches
-            1       // Heading tolerance radians
+            0.99,  // End T-value
+            100,   // Timeout ms
+            1,     // Position tolerance inches
+            1      // Heading tolerance radians
     );
 
     // ============================================================
     //                    PINPOINT LOCALIZATION
+    //   Pod offsets are measured from robot center to each pod.
+    //   Re-measure and re-tune if pods are remounted.
+    //   Use the Pedro automatic offset tuner (v2.1+) to skip manual measurement.
+    //   https://pedropathing.com/docs/pathing/tuning/localization/pinpoint
+    // ============================================================
 
     public static PinpointConstants localizerConstants = new PinpointConstants()
-            /** Pod offsets from robot center in inches */
-            .forwardPodY(3)  // Negative = behind center
-            .strafePodX(-9)     // Negative = left of center
+            .forwardPodY(3)    // inches forward of center (positive = forward)
+            .strafePodX(-9)    // inches left of center (negative = left)
             .distanceUnit(DistanceUnit.INCH)
             .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_SWINGARM_POD)
-            /** Test directions with Localization Test - forward should increase X */
             .forwardEncoderDirection(GoBildaPinpointDriver.EncoderDirection.REVERSED)
-            // https://pedropathing.com/docs/pathing/tuning/localization/pinpoint#encoder-directions
             .strafeEncoderDirection(GoBildaPinpointDriver.EncoderDirection.REVERSED);
 
     // ============================================================
-    //    FOLLOWER FACTORY - WHERE WE PUT ALL THE STUFF TOGETHER
+    //                    FOLLOWER FACTORY
+    // ============================================================
 
     public static Follower createFollower(HardwareMap hardwareMap) {
         return new FollowerBuilder(followerConstants, hardwareMap)

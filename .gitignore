@@ -3,12 +3,14 @@
 *.aar
 *.ap_
 *.aab
-
+.claude
+.claude/
 !libs/*.aar
-
+.env
 # Files for the ART/Dalvik VM
 *.dex
-
+tools/
+gitbook/
 # Java/JDK files
 *.class
 *.hprof

@@ -4,7 +4,7 @@ import com.pedropathing.follower.Follower;
 import com.seattlesolvers.solverslib.command.CommandBase;
 import com.seattlesolvers.solverslib.util.Timing;
 
-import org.firstinspires.ftc.teamcode.Ganymede;
+import org.firstinspires.ftc.teamcode.Moonbase;
 import org.firstinspires.ftc.teamcode.subsystems.PedroDrive;
 
 import java.util.concurrent.TimeUnit;
@@ -23,7 +23,7 @@ public abstract class DriveAbstract extends CommandBase {
     // ============================================================
 
     /** Main robot object with all subsystems */
-    protected final Ganymede robot;
+    protected final Moonbase robot;
 
     /** Drive subsystem for movement */
     protected final PedroDrive drive;
@@ -50,7 +50,7 @@ public abstract class DriveAbstract extends CommandBase {
      *                       Use reasonable values: 3-5s for simple moves,
      *                       10-15s for complex autonomous sequences
      */
-    public DriveAbstract(Ganymede robot, double timeoutSeconds) {
+    public DriveAbstract(Moonbase robot, double timeoutSeconds) {
         this.robot = robot;
         this.drive = robot.drive;
         this.follower = drive.follower;
