@@ -429,13 +429,11 @@ Pedro tuning must be done in order. Each controller builds on the previous one. 
 **Finding Variables in Panels:** Open Panels Dashboard at `192.168.43.1:8001`, then navigate to the **Configuration** tab. You'll see a large dropdown table—use Ctrl+F (or Cmd+F) to search for the specific variable names mentioned below. This makes finding the right setting much faster.
 
 {% hint style="success" %}
-### WATCH THE VIDEOS CAREFULLY
+#### WATCH THE VIDEOS CAREFULLY
 
 Look at the small behaviors they're improving as they fiddle with the numbers on Panels
 
 [https://pedropathing.com/docs/pathing/tuning](https://pedropathing.com/docs/pathing/tuning)
-
-
 {% endhint %}
 
 ***

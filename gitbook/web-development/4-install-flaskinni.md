@@ -2,7 +2,7 @@
 
 ## Learning Target
 
-* I can run Flaskinni after having cloned its code, configured its dependencies in a virtual environment, set up a database, and added an environmental variables file.&#x20;
+* I can run Flaskinni after having cloned its code, configured its dependencies in a virtual environment, set up a database, and added an environmental variables file.
 
 ## Install Party
 
@@ -10,25 +10,25 @@ A day before some hackathons or events like [RailsBridge](http://railsbridge.org
 
 ### Your OS
 
-Whether you're using Windows, macOS, or Linux, you have a responsibility to your teammates that you keep your machine updated and organized. Run system updates, keep files off your desktop, have a system of organizing your project files.  Knock this out early so it doesn't jam you up while installing complex programming tools.
+Whether you're using Windows, macOS, or Linux, you have a responsibility to your teammates that you keep your machine updated and organized. Run system updates, keep files off your desktop, have a system of organizing your project files. Knock this out early so it doesn't jam you up while installing complex programming tools.
 
 ### Dev Tools
 
-Go slowly. Go patiently. Things may not work. You **will** have to Google stuff, study, maybe ask for help, and solve your problems. Keep hacking at the problem. That's how we all learn best.&#x20;
+Go slowly. Go patiently. Things may not work. You **will** have to Google stuff, study, maybe ask for help, and solve your problems. Keep hacking at the problem. That's how we all learn best.
 
 ####
 
 #### Python
 
-Your computer only understands Python code through a [compiler ](https://en.wikipedia.org/wiki/Compiler)or [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\)). Your computer uses bytecode to run the software. Our interpreter changes our beautiful Python code into a jumble of machine instructions. Ensure you use the same version in development as you do in production. That means if your server will run, say, Python 3.10, that's what you use to build the thing.&#x20;
+Your computer only understands Python code through a [compiler ](https://en.wikipedia.org/wiki/Compiler)or [interpreter](https://en.wikipedia.org/wiki/Interpreter_\(computing\)). Your computer uses bytecode to run the software. Our interpreter changes our beautiful Python code into a jumble of machine instructions. Ensure you use the same version in development as you do in production. That means if your server will run, say, Python 3.10, that's what you use to build the thing.
 
 {% embed url="https://www.python.org/downloads/" %}
-What version should you install? Whichever is the most stable on an Ubuntu server.&#x20;
+What version should you install? Whichever is the most stable on an Ubuntu server.
 {% endembed %}
 
 #### Postgres
 
-This is the open-source database tool we're going to use. You'll set up Postgres to host your own private database. It won't be available outside of your computer. It's just so while you work on an app, it can access a practice source of information.&#x20;
+This is the open-source database tool we're going to use. You'll set up Postgres to host your own private database. It won't be available outside of your computer. It's just so while you work on an app, it can access a practice source of information.
 
 {% embed url="https://www.postgresql.org/download/" %}
 
@@ -40,7 +40,7 @@ This is the open-source database tool we're going to use. You'll set up Postgres
 
 #### Git / GitHub
 
-Mac users should have [Xcode ](https://apps.apple.com/us/app/xcode/id497799835?mt=12)and run `xcode-select --install` in their terminals. Windows users need to install [Git for Windows](https://git-scm.com/download/win). This gives you the commands to clone a repository, manage your changes to code, and sync&#x20;
+Mac users should have [Xcode ](https://apps.apple.com/us/app/xcode/id497799835?mt=12)and run `xcode-select --install` in their terminals. Windows users need to install [Git for Windows](https://git-scm.com/download/win). This gives you the commands to clone a repository, manage your changes to code, and sync
 
 {% embed url="https://desktop.github.com" %}
 
@@ -48,24 +48,24 @@ Mac users should have [Xcode ](https://apps.apple.com/us/app/xcode/id497799835?m
 
 #### NPM
 
-Once upon a time, Javascript was just used to make pictures slowly spin on a webpage. Now we've got NodeJS letting this language that used to be purely stuck inside a web browser to now run independently on your computer. It's so popular, the [npm](https://www.npmjs.com/) tool to quickly install awesome new Node packages is a must-have.&#x20;
+Once upon a time, Javascript was just used to make pictures slowly spin on a webpage. Now we've got NodeJS letting this language that used to be purely stuck inside a web browser to now run independently on your computer. It's so popular, the [npm](https://www.npmjs.com/) tool to quickly install awesome new Node packages is a must-have.
 
 {% embed url="https://www.npmjs.com/get-npm" %}
 
 {% hint style="info" %}
-#### Choco & Brew
+**Choco & Brew**
 
 Node Package Manager often encourages the installation of amazing CLI installers like `choco` or `brew` (Mac and Windows respectively). So if you like quickly installing awesome things and can accept the responsibility to do so safely, get one!
 
 [https://chocolatey.org/](https://chocolatey.org/) (Windows)\
-[https://brew.sh/](https://brew.sh/)  (Mac)
+[https://brew.sh/](https://brew.sh/) (Mac)
 {% endhint %}
 
 ####
 
 #### Scss
 
-Old-school CSS is a pain to program at a large scale. Sass is much more powerful. Your computer has to have it to run the [WebAssembly ](https://webassembly.org/)service built into Flaskinni. If you've got Choco or Brew installed, adding Sass is a breeze.&#x20;
+Old-school CSS is a pain to program at a large scale. Sass is much more powerful. Your computer has to have it to run the [WebAssembly ](https://webassembly.org/)service built into Flaskinni. If you've got Choco or Brew installed, adding Sass is a breeze.
 
 {% embed url="https://sass-lang.com/install" %}
 
@@ -85,11 +85,11 @@ I recommend these extensions
 
 ## Setup Code
 
-You can edit your code on the cloud with cool sites like [SourceLair](https://sourcelair.com). A cloud-based IDE is likely going to be based on Linux. That means you'll need to know a bit about [Linux CLI](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview).  Linux plays well with coders and a cloud-based IDE makes it easy to share your development progress with people and get feedback faster. That's big.&#x20;
+You can edit your code on the cloud with cool sites like [SourceLair](https://sourcelair.com). A cloud-based IDE is likely going to be based on Linux. That means you'll need to know a bit about [Linux CLI](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview). Linux plays well with coders and a cloud-based IDE makes it easy to share your development progress with people and get feedback faster. That's big.
 
 You can also set up right on your computer. You should know how to do this just so you can practice putting all the pieces together. I prefer to program in the cloud and locally and use [GitHub](https://desktop.github.com) to keep the two environments in sync.
 
-### &#x20;Clone the repo
+### Clone the repo
 
 Use VS Code's git tool to pull down the repo from GitHub.com: `https://github.com/dadiletta/flaskinni`
 
@@ -97,13 +97,13 @@ Use VS Code's git tool to pull down the repo from GitHub.com: `https://github.co
 
 ### Stand up the db
 
-"Stand up" a database just sounds so much cooler than "set up," but it's the same idea. You can see in `settings.py` that Flaskinni by default is going to reach out to a PSQL database named `db-flaskinni` on the server  `0.0.0.0`. The username and password used to access the database are also loaded there. Changes to this information shouldn't be done in `settings.py` but rather a `.env` fille. But before we do any of that, fire up pgAdmin and create a database.&#x20;
+"Stand up" a database just sounds so much cooler than "set up," but it's the same idea. You can see in `settings.py` that Flaskinni by default is going to reach out to a PSQL database named `db-flaskinni` on the server `0.0.0.0`. The username and password used to access the database are also loaded there. Changes to this information shouldn't be done in `settings.py` but rather a `.env` fille. But before we do any of that, fire up pgAdmin and create a database.
 
 {% embed url="http://youtu.be/0VquKkchhNU?hd=1" %}
 
 ### Env variables
 
-Our `.env` file doesn't and shouldn't ever get synced to GitHub. It's our secure place to keep the unique variables for each environment where our app will run.&#x20;
+Our `.env` file doesn't and shouldn't ever get synced to GitHub. It's our secure place to keep the unique variables for each environment where our app will run.
 
 {% tabs %}
 {% tab title=".env" %}
@@ -178,7 +178,7 @@ First you use the correct version of Python to launch its **venv** module to cre
 Let's say you're using Windows and you need to specify a non-default version of Python. You may need a line like:`/c/Users/smithj/AppData/Local/Programs/Python/Python3XX/python -m venv venv`
 {% endhint %}
 
-Then we **activate the virtual environment** so all our required "expansion packs" or dependencies will be installed in our little bubble: &#x20;
+Then we **activate the virtual environment** so all our required "expansion packs" or dependencies will be installed in our little bubble:
 
 * Mac: `source venv/bin/activate`
 * Windows: (might need) `Set-ExecutionPolicy Unrestricted -Scope Process`\
@@ -203,17 +203,17 @@ You're likely going to end up with the wrong version of Flask-Security. So next 
 
 ### Flask run
 
-After running `flask run` in VS Code, you should be able to visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to see your website.&#x20;
+After running `flask run` in VS Code, you should be able to visit [http://127.0.0.1:5000](http://127.0.0.1:5000) to see your website.
 
 ### Migrations
 
-This is important! Pity the poor programmers that forget to set up their migration tools. Once Flaskinni is up and running the first time, run `flask db init` to allow Flask-Migrate to help with any future changes to your models. We'll talk about [why that's super important later](https://gilmour.online/compsci/web-development/flaskinni-drills#migrate-and-upgrade-the-right-way).&#x20;
+This is important! Pity the poor programmers that forget to set up their migration tools. Once Flaskinni is up and running the first time, run `flask db init` to allow Flask-Migrate to help with any future changes to your models. We'll talk about [why that's super important later](https://gilmour.online/compsci/web-development/flaskinni-drills#migrate-and-upgrade-the-right-way).
 
 ### Alternate setups
 
 #### Replit
 
-Help! I don't know how to configure Replit's database service with SQLAlchemy. Their technical support doesn't know how to do it. They point me to [the forums](https://replit.com/talk/ask/Struggling-to-configure-my-flask-projects/122956)... and those folks can't crack it, either.&#x20;
+Help! I don't know how to configure Replit's database service with SQLAlchemy. Their technical support doesn't know how to do it. They point me to [the forums](https://replit.com/talk/ask/Struggling-to-configure-my-flask-projects/122956)... and those folks can't crack it, either.
 
 #### Docker
 
@@ -222,16 +222,11 @@ I need to study up on Docker. These are notes that I'll use to redo this section
 1. Make sure [Docker ](https://www.docker.com/)is installed, running, and logged in.
 2. Clone [Flaskinni](https://github.com/dadiletta/flaskinni)\
    `git clone http://github.com/dadiletta/flaskinni`
-3. Edit the `Dockerfile` with environmental variables&#x20;
+3. Edit the `Dockerfile` with environmental variables
 4. `docker-compose up --build`
 
-
-
-
-
 {% hint style="danger" %}
-#### What if it's not working?
+**What if it's not working?**
 
-You're going to get stuck... a lot. This is where you can distinguish yourself as a programmer. Every problem big and small you hack your way through makes you more legit. So enjoy the grind. It's important to read _around_ the problem and not just through it.  Sloppy copying from StackOverflow once you copy and paste the error into Google can get you in trouble. Get background research done to understand some of the bigger concepts. Be willing to reach out for help, but respect that other people are grinding away too. Always show evidence of your research when asking for help as it will build trust with your support network.&#x20;
+You're going to get stuck... a lot. This is where you can distinguish yourself as a programmer. Every problem big and small you hack your way through makes you more legit. So enjoy the grind. It's important to read _around_ the problem and not just through it. Sloppy copying from StackOverflow once you copy and paste the error into Google can get you in trouble. Get background research done to understand some of the bigger concepts. Be willing to reach out for help, but respect that other people are grinding away too. Always show evidence of your research when asking for help as it will build trust with your support network.
 {% endhint %}
-

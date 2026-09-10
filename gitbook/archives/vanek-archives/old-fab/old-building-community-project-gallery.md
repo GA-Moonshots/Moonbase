@@ -8,7 +8,7 @@
 
 ### Anai
 
-<div><figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-55-03PM-000_CustomizedView14827916663_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-55-48PM-000_CustomizedView14332911302_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-56-16PM-000_CustomizedView48499007758_png (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-56-48PM-000_CustomizedView7845643241_png (1).png" alt=""><figcaption></figcaption></figure></div>
+<div><figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-55-03PM-000_CustomizedView14827916663_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-55-48PM-000_CustomizedView14332911302_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-56-16PM-000_CustomizedView48499007758_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Ghost_shed_2022-Sep-15_12-56-48PM-000_CustomizedView7845643241_png.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Barrett
 
@@ -21,8 +21,6 @@ Coming soon
 <div><figure><img src="../../../.gitbook/assets/community project 1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/community project 2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/community project 3.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/community project 4.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Brody
-
-
 
 <div><figure><img src="../../../.gitbook/assets/Untitled_2022-Sep-15_12-30-12PM-000_CustomizedView11759444541_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Untitled_2022-Sep-15_12-31-39PM-000_CustomizedView28979547820_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Untitled_2022-Sep-15_12-33-54PM-000_CustomizedView22542312452_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/Untitled_2022-Sep-15_12-54-54PM-000_CustomizedView17976871380_png.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -43,8 +41,6 @@ Coming soon
 ### Michael
 
 <div><figure><img src="../../../.gitbook/assets/railway_2022-Sep-26_01-42-40PM-000_CustomizedView35209374719_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/railway_2022-Sep-26_02-07-04PM-000_CustomizedView5030279019_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/railway_2022-Sep-26_02-07-36PM-000_CustomizedView19757474360_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/railway_2022-Sep-26_02-08-16PM-000_CustomizedView30415081230_png.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
 ## Automotive Community
 
@@ -83,4 +79,3 @@ Coming soon
 ### Cathy
 
 <div><figure><img src="../../../.gitbook/assets/_2022-Sep-27_03-53-06AM-000_CustomizedView1602733451_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/_2022-Sep-27_03-53-06AM-000_CustomizedView2334729663_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/_2022-Sep-27_03-53-06AM-000_CustomizedView4889303891_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../../../.gitbook/assets/_2022-Sep-27_03-53-06AM-000_CustomizedView16106494438_png.png" alt=""><figcaption></figcaption></figure></div>
-

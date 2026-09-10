@@ -10,7 +10,7 @@ This section of [Gilmour Academy](https://www.gilmour.org)'s Computer Science De
 
 ### Why web development?
 
-Web Development is my favorite area of Computer Science to study. Programming at the hub of all information gives you a bird’s eye view of how business operations fit together. If an organization has mobile apps, websites, and some sort of critical information for their business, then web developers are the people holding systems together.  There's so much happening in this field, too. In fact, we've got to be careful that all this cool tech doesn't overwhelm you.&#x20;
+Web Development is my favorite area of Computer Science to study. Programming at the hub of all information gives you a bird’s eye view of how business operations fit together. If an organization has mobile apps, websites, and some sort of critical information for their business, then web developers are the people holding systems together. There's so much happening in this field, too. In fact, we've got to be careful that all this cool tech doesn't overwhelm you.
 
 {% embed url="https://www.youtube.com/watch?v=VXe9MRZOyuo&list=PL_JS5ztwk2L8FT_9YccSrbEpN6eEQuN0E&index=1" %}
 
@@ -22,7 +22,7 @@ Want to jump in with both feet and go hard on the research? See if you can get y
 
 ### **Acceptable Level of Abstraction**
 
-Little kids like to keep asking, “_Why_?”&#x20;
+Little kids like to keep asking, “_Why_?”
 
 A thread of inquiry can always get more detailed. It never stops. You can keep digging deeper. Sooner or later we just accept the idea of something and stop asking questions. For example, I know hardly any of the electrical engineering involved to build a stick of RAM but I would still claim I know what RAM is. I’ve just accepted that there’s a thing called RAM and it works like so and I’m okay not knowing any more details than that for right now.
 
@@ -37,23 +37,23 @@ We are going to narrow our focus to building a Python Flask app using templates 
 
 ### **Resources**
 
-* **Guided Training:** Do your homework! Actually grind out the projects in tutorials. Learn the rules of new languages.&#x20;
+* **Guided Training:** Do your homework! Actually grind out the projects in tutorials. Learn the rules of new languages.
   * [Pretty Printed](https://prettyprinted.com/)
   * [The Flask Mega-Tutorial by (the great) Miguel Grinberg](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
-  * [Codecademy](https://codecademy.com)  &#x20;
+  * [Codecademy](https://codecademy.com)
   * [SoloLearn](https://sololearn.com)
-* **Publishing:**  How do we get our Flask app online?
+* **Publishing:** How do we get our Flask app online?
   * [Digital Ocean](http://digitalocean.com)
   * [Heroku](http://heroku.com)
 
 #### Extra Resources for the Try-Hards:
 
-![](<../.gitbook/assets/giphy (6).gif>)
+![](<../.gitbook/assets/giphy (1).gif>)
 
 * [Official Flask Documentation](http://flask.pocoo.org/docs/)
 * [JavaScript on Udemy](https://www.udemy.com/the-complete-javascript-course/learn/)
-* [Code Combat](http://codecombat.com)  (Python)
+* [Code Combat](http://codecombat.com) (Python)
 * [CodeSignal](https://codesignal.com)
 * Books at give superpowers
-  * [Flask by Miguel Grinberg ](https://www.amazon.com/Flask-Web-Development-Developing-Applications/dp/1491991739)
+  * [Flask by Miguel Grinberg](https://www.amazon.com/Flask-Web-Development-Developing-Applications/dp/1491991739)
   * [Fluent Python](https://www.amazon.com/Fluent-Python-Concise-Effective-Programming/dp/1491946008)

@@ -1,26 +1,18 @@
 # Building Community Gallery Spring 2026
 
-
-
 ## Tiny Houses
 
 ### Charley
-
-
 
 <div><figure><img src="../.gitbook/assets/Charley_Rendering1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Charley_Rendering2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Charley_Rendering3.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Charley_Rendering4.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Delaney
 
-<div><figure><img src="../.gitbook/assets/Dwelling_project_2026 (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Dwelling_project_2026-1 (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Dwelling_project_2026-2 (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Dwelling_project_2026-3 (1).png" alt=""><figcaption></figcaption></figure></div>
-
-
+<div><figure><img src="../.gitbook/assets/Dwelling_project_2026.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Dwelling_project_2026-1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Dwelling_project_2026-2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Dwelling_project_2026-3.png" alt=""><figcaption></figcaption></figure></div>
 
 ### Hanna
 
 <div><figure><img src="../.gitbook/assets/tiny_town_project_2026.pic1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/tiny_town_project_2026.pic2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/tiny_town_project_2026.pic3.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/tiny_town_project_2026.pic4.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/tiny_town_project_2026.pic5.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
 ### Rachel
 
@@ -40,19 +32,13 @@
 
 ### Sarah
 
-<div><figure><img src="../.gitbook/assets/HouseRendering1 (1).png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/houseRendering2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/houseRendering3.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/houseRending4.png" alt=""><figcaption></figcaption></figure></div>
-
-
-
-
+<div><figure><img src="../.gitbook/assets/HouseRendering1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/houseRendering2.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/houseRendering3.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/houseRending4.png" alt=""><figcaption></figcaption></figure></div>
 
 ***
 
 ## Cartoon Community
 
 ### Conor
-
-
 
 <div><figure><img src="../.gitbook/assets/Krusty_Krab_Project_1_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Krusty_Krab_Project_2_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Krusty_Krab_Project_3_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Krusty_Krab_Project_4_png.png" alt=""><figcaption></figcaption></figure></div>
 
@@ -63,8 +49,6 @@
 ### Wyatt
 
 <div><figure><img src="../.gitbook/assets/Squidward house 3_2026-Feb-02_07-36-15PM-000_CustomizedView37323065692_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Squidwar house 4_2026-Feb-02_07-13-01PM-000_CustomizedView28027633943.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Squidward House 1_2026-Feb-02_07-37-15PM-000_CustomizedView46073398108_png.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Squidward house 2_2026-Feb-02_07-36-39PM-000_CustomizedView24820849878_png.png" alt=""><figcaption></figcaption></figure></div>
-
-
 
 ***
 
@@ -81,4 +65,3 @@
 ### Zach
 
 <div><figure><img src="../.gitbook/assets/Pirate_Project_pic 3.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Pirate_Project_pic 1.png" alt=""><figcaption></figcaption></figure> <figure><img src="../.gitbook/assets/Pirate_Project_pic 2.png" alt=""><figcaption></figcaption></figure></div>
-

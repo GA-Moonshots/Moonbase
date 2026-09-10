@@ -2,22 +2,22 @@
 
 ## Learning Targets
 
-* I can describe the MVT components of Flaskinni.&#x20;
+* I can describe the MVT components of Flaskinni.
 * I can describe the thread's steps as my app starts up.
 
 ## Organiz**ation**
 
-Remember, you can help add comments and docstrings to Flaskinni and submit pull requests. Even beginners can help contribute to open source projects in surprisingly substantial ways.&#x20;
+Remember, you can help add comments and docstrings to Flaskinni and submit pull requests. Even beginners can help contribute to open source projects in surprisingly substantial ways.
 
 ### App Factory
 
 ![All the pieces of our app get bolted on in a structure called an "application factory"](../.gitbook/assets/Robot-Factory-88676.gif)
 
-We've got a handy little method that instantiates our app, loads the settings, and straps on all its expansion packs. Let's start our tour of the code where Flask is spawned. From "[Demystifying Flask’s Application Factory](https://hackersandslackers.com/flask-application-factory/)":&#x20;
+We've got a handy little method that instantiates our app, loads the settings, and straps on all its expansion packs. Let's start our tour of the code where Flask is spawned. From "[Demystifying Flask’s Application Factory](https://hackersandslackers.com/flask-application-factory/)":
 
-> &#x20;The reason why the _Application Factory_ is so important has to do with something called Flask's **Application Context**. Our app's "context" is what takes the assortment of Python files and modules which make up our app and brings them together so that they see and work with one another.&#x20;
+> The reason why the _Application Factory_ is so important has to do with something called Flask's **Application Context**. Our app's "context" is what takes the assortment of Python files and modules which make up our app and brings them together so that they see and work with one another.
 
-When your app is serving hundreds or thousands of people at a time, your server will run many instances of your app. You may also run your app in different modes, like a text-only shell. An application factory addresses this need by spitting out instances of `app`&#x20;
+When your app is serving hundreds or thousands of people at a time, your server will run many instances of your app. You may also run your app in different modes, like a text-only shell. An application factory addresses this need by spitting out instances of `app`
 
 {% embed url="http://youtu.be/6dnt2mInSVY?hd=1" %}
 
@@ -37,13 +37,13 @@ Now that Flaskinni is running in your environment, local or cloud-based, let's t
 
 ### File structure
 
-The T part of our **MVT** all starts with `base.html`.  [See how much of the documentation you can read before your brain wimps out](http://flask.pocoo.org/docs/0.12/patterns/templateinheritance/)
+The T part of our **MVT** all starts with `base.html`. [See how much of the documentation you can read before your brain wimps out](http://flask.pocoo.org/docs/0.12/patterns/templateinheritance/)
 
 ![](../.gitbook/assets/CR-Reading-3.gif)
 
 ![](https://lh6.googleusercontent.com/2n50I2C6mfI3yIRdJZs85UvikBrsnDzFHNEFcJYH044Q105SYB_FOu7kPsFNKBOw3IpdpEQglWCNPU260CaI_0JRJrGB6Clu8lxKalUdSOrllCe0NF0b1gQtWjdVbiorJvaq9VO5)
 
-The purpose of the base template is to give all the pages in your app common assets. This such as fonts, CSS files, nav bar. Every page must link to the base file. It is kept in the `/templates` folder, as `base.html`. The base template is like a picture frame, loading common elements like the nav bar, footer, and your little [favicon](https://en.wikipedia.org/wiki/Favicon). &#x20;
+The purpose of the base template is to give all the pages in your app common assets. This such as fonts, CSS files, nav bar. Every page must link to the base file. It is kept in the `/templates` folder, as `base.html`. The base template is like a picture frame, loading common elements like the nav bar, footer, and your little [favicon](https://en.wikipedia.org/wiki/Favicon).
 
 ![I can't remember where this picture in my notes came from but it's not my creation.](https://lh5.googleusercontent.com/FZEFqj1fUSldN1AgN5BonX0vMG0SuZjEW_5h1h72zOeNGEjGHBsVWnDvQhDaWBs8kJTRL7z4igwa-duztfyrrApiUFfczXEq-xZGroTaP75ZOTHow_5FPj_wU3Qt26XCQhiZQA8t)
 
@@ -83,9 +83,9 @@ We’re going to make a new template that inherits from our base.html so you can
 
 {% embed url="https://sass-lang.com/guide" %}
 
-Sass makes CSS easier, even if you have to spend a few minutes here and there refreshing yourself on how to use the Sass tricks and how to compile your Sass down to CSS. I personally use a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to manage this automatically.&#x20;
+Sass makes CSS easier, even if you have to spend a few minutes here and there refreshing yourself on how to use the Sass tricks and how to compile your Sass down to CSS. I personally use a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) to manage this automatically.
 
-Don't want to learn? There is a lazy way out and that's to edit your CSS directly. No judgments.&#x20;
+Don't want to learn? There is a lazy way out and that's to edit your CSS directly. No judgments.
 
 1. Pick out a header and a body font at [fonts.google.com](https://fonts.google.com/)
 2. Add them to your collection and get the \<link> we’ll use to embed a connection to Google Fonts.
@@ -143,7 +143,7 @@ Congratulations! You just passed your first variable to a template.
 
 ### Flash Notifications
 
-![Flash notification system is a great illustration of the power of templating](<../.gitbook/assets/tenor (1).gif>)
+![Flash notification system is a great illustration of the power of templating](../.gitbook/assets/tenor.gif)
 
 We have cool, color-changing notifications in Flaskinni that rely on Bootstrap classes. So if you want to send a good alert message that something worked, you'd say:\
 `flash("Your message has been sent!", "success")`
@@ -152,15 +152,15 @@ But if something failed, you'd write:
 
 `flash("Your message was destroyed by mistake. Whoops!", "danger")`
 
-What other Flash notifications are there? How are the flash notifications being built? Let's look at where they come up in the **base.html** file, trace back the macro that builds the flash messages and then see what other options come with Flaskinni.&#x20;
+What other Flash notifications are there? How are the flash notifications being built? Let's look at where they come up in the **base.html** file, trace back the macro that builds the flash messages and then see what other options come with Flaskinni.
 
-![There we include the \_message.html partial ](<../.gitbook/assets/image (223).png>)
+![There we include the \_message.html partial](<../.gitbook/assets/image (223).png>)
 
 ![Those are the options you've got. You can totally add your own.](<../.gitbook/assets/image (212).png>)
 
 ### **Sessions**
 
-Cookies!&#x20;
+Cookies!
 
 {% embed url="https://www.youtube.com/watch?v=WsoL4MIhJbg" %}
 
@@ -183,7 +183,7 @@ def read(slug):
 
 ### Example Relationships
 
-Check out line #20.&#x20;
+Check out line #20.
 
 ```python
 class User(db.Model, UserMixin):
@@ -210,13 +210,9 @@ class User(db.Model, UserMixin):
 
 ## Extensions
 
-
-
 ### **Flask-Security**
 
 {% embed url="https://pythonhosted.org/Flask-Security/index.html" %}
-
-
 
 ### **Flask-Mail**
 
@@ -227,4 +223,3 @@ class User(db.Model, UserMixin):
 ### **Flask-RESTful**
 
 ##
-

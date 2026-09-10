@@ -14,7 +14,7 @@ The Command pattern boasts a rich history dating back to the late 1970s and earl
 
 Its popularity soared with the rise of design patterns in the 1990s, solidified by Erich Gamma et al.'s influential book "Design Patterns: Elements of Reusable Object-Oriented Software." This widespread recognition cemented the Command pattern as a valuable tool for promoting loose coupling, reusability, and maintainability in object-oriented programming.
 
-<div align="left"><figure><img src="../../.gitbook/assets/9780201633610 (1).webp" alt=""><figcaption><p>Gamma, Helm, Johnson and Vlissides are sometimes referred to as the Gang of Four or GoF</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/9780201633610.webp" alt=""><figcaption><p>Gamma, Helm, Johnson and Vlissides are sometimes referred to as the Gang of Four or GoF</p></figcaption></figure></div>
 
 The Command pattern originates from software design principles and offers a structured way to manage robot actions. Instead of writing long, blocking code sections, you create independent classes called **Commands**. Each Command encapsulates your robot's specific task, like driving forward, turning, or activating a mechanism.
 
@@ -22,7 +22,7 @@ The Command pattern originates from software design principles and offers a stru
 
 ### **Farewell, Blocking Code**
 
-Traditional robot programming often involves lengthy, sequential code blocks, potentially hindering responsiveness and multitasking. If your robot is stuck inside of a loop that gradually moves a motor, it's not doing other things. It's blocked until you move on.&#x20;
+Traditional robot programming often involves lengthy, sequential code blocks, potentially hindering responsiveness and multitasking. If your robot is stuck inside of a loop that gradually moves a motor, it's not doing other things. It's blocked until you move on.
 
 Non-blocking commands eliminate the need to do one thing at a time by repeatedly calling `execute` functions that run until their `isFinished` condition is reached. This allows the robot to perform multiple actions simultaneously. This means smoother operation and the ability to react to real-time events effectively.
 
